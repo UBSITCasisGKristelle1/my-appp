@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutComponent } from './about.component';
+import { UserInteractionComponent } from './user-interaction.component';
 
-describe('AboutComponent', () => {
-  let component: AboutComponent;
-  let fixture: ComponentFixture<AboutComponent>;
+describe('UserInteractionComponent', () => {
+  let component: UserInteractionComponent;
+  let fixture: ComponentFixture<UserInteractionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AboutComponent]
+      imports: [UserInteractionComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AboutComponent);
+    fixture = TestBed.createComponent(UserInteractionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

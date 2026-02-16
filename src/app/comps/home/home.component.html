@@ -1,7 +1,6 @@
-<div class="jumbotron">
-  <h1 class="display-4">Welcome to Our Application!</h1>
-  <p class="lead">This is the home page where you can find the latest updates and features.</p>
-  <hr class="my-4">
-  <p>Explore our services and offerings by navigating through the menu.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>  
+<div [class.highlighted]="isHighlighted" style="padding: 20px;">
+  <h1>{{ appTitle }}</h1>
+  <img [src]="src/app/profile/OIP.webp" alt="User Avatar" width="100">
+  <p>Today's date: {{ currentDate }}</p>
 </div>
+

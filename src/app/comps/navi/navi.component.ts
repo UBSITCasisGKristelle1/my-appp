@@ -1,10 +1,11 @@
+
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navi',
-  imports: [],
+  standalone: true,
   templateUrl: './navi.component.html',
-  styleUrl: './navi.component.css'
+  styleUrls: ['./navi.component.css']
 })
 export class NaviComponent {
 
