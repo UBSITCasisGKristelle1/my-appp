@@ -1,0 +1,10 @@
+.grade-card { padding: 12px; border: 1px solid #ddd; border-radius: 6px; max-width: 420px; }
+.grade-card .highlighted { box-shadow: 0 0 6px rgba(46,117,182,0.2); }
+.passing { background: #e9f7ef; color: #155724; padding: 6px; border-radius: 4px; }
+.failing { background: #fbeaea; color: #721c24; padding: 6px; border-radius: 4px; }
+
+.grade-card h2{margin-top:0}
+.grade-card label{display:block;margin:10px 0}
+.grade-card input[type="number"], .grade-card input[type="text"]{width:100%;padding:8px;border:1px solid #ddd;border-radius:6px}
+.summary{margin-top:12px;padding:10px;border-top:1px dashed #eee}
+.summary h3{margin:0 0 8px 0;font-size:1rem}

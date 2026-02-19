@@ -1,5 +1,4 @@
-h1 {
-    color: aliceblue;
-    font-size: large;
-    font: 1em sans-serif;
-;}
+/* App component scoped styles (kept minimal - globals in styles.css) */
+main.container { padding-top: 18px; }
+
+#app-root-hint { color: var(--muted); font-size: 0.9rem }

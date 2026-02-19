@@ -1,6 +1,11 @@
-<div [class.highlighted]="isHighlighted" style="padding: 20px;">
-  <h1>{{ appTitle }}</h1>
-  <img [src]="src/app/profile/OIP.webp" alt="User Avatar" width="100">
-  <p>Today's date: {{ currentDate }}</p>
+<div class="home-card" [class.highlighted]="isHighlighted">
+  <img [src]="userImageUrl" alt="User Avatar">
+  <div class="profile-meta">
+    <h1>{{ appTitle }}</h1>
+    <h2>{{ userName }}</h2>
+    <p class="text-muted">{{ userRole }} • {{ userEmail }}</p>
+    <p class="bio">{{ userBio }}</p>
+    <p class="date">Today's date: {{ currentDate | date:'mediumDate' }}</p>
+  </div>
 </div>
 

@@ -1,0 +1,49 @@
+<div class="grade-card" [class.highlighted]="isHighlighted">
+  <h2>Grade Calculator</h2>
+
+  <!-- String Interpolation -->
+  <p>Student: {{ studentName }}</p>
+  <p>Score: {{ score }}</p>
+  <p>Letter Grade: <span [style.color]="gradeColor">{{ getLetterGrade() }}</span></p>
+
+  <!-- Attribute Binding: colspan on table cell -->
+  <table>
+    <tr>
+      <td [attr.colspan]="colSpan">Summary</td>
+    </tr>
+  </table>
+
+  <!-- Two-way binding on name -->
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="studentName" />
+  </label>
+
+  <!-- Property + Attribute + Event Binding on score input -->
+  <label>
+    Score:
+    <input
+      type="number"
+      [max]="100"
+      [attr.aria-label]="'Score input for ' + studentName"
+      (input)="onScoreInput($event)"
+      [value]="score"
+    />
+  </label>
+
+  <!-- Property binding for disabled -->
+  <button [disabled]="score > 100 || score < 0" (click)="onSubmit()">Submit</button>
+
+  <!-- Class binding -->
+  <div [class.passing]="score>=60" [class.failing]="score<60">
+    Status: {{ score>=60 ? 'Passing' : 'Failing' }}
+  </div>
+
+  <!-- Grade summary -->
+  <div class="summary">
+    <h3>Grade Summary for {{ studentName }}</h3>
+    <p>Score: <strong>{{ score }}</strong> / 100</p>
+    <p>Letter Grade: <strong><span [style.color]="gradeColor">{{ getLetterGrade() }}</span></strong></p>
+    <p>Result: <strong>{{ score>=60 ? 'Pass' : 'Fail' }}</strong></p>
+  </div>
+</div>
